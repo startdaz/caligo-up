@@ -39,6 +39,7 @@ class PersistentStorage(Storage):
         self._session = database["SESSION"]
 
     async def open(self) -> None:
+        print("Opening session storage...")
         """
         dc_id     INTEGER PRIMARY KEY,
         api_id    INTEGER,
@@ -49,9 +50,14 @@ class PersistentStorage(Storage):
         is_bot    INTEGER
         """
 
-        if await self._session.find_one({"_id": 0}, {}):
+        session = await self._session.find_one({"_id": 0}, {})
+        if session:
+            print("Session found in MongoDB:", session)
             return
+        #if await self._session.find_one({"_id": 0}, {}):
+           # return
 
+        print("No session found, creating new session in MongoDB...")
         await self._session.insert_one(
             {
                 "_id": 0,
@@ -65,19 +71,31 @@ class PersistentStorage(Storage):
             }
         )
 
+    
+    async def update_usernames(self, usernames):
+        print("Skipping update_usernames(), MongoDB storage does not require it.")
+        return
+
+    async def update_state(self, state):
+        print("Skipping update_state(), MongoDB storage does not require it.")
+        return
+
     async def save(self) -> None:
-        pass
+        print("Saving session to MongoDB...")
 
     async def close(self) -> None:
         pass
 
     async def delete(self) -> None:
+        print("Deleting session from MongoDB...")
         try:
             await self._session.delete_one({"_id": 0})
             if self._remove_peers:
                 await self._peer.delete_many({})
-        except Exception:  # skipcq: PYL-W0703
-            return
+        except Exception as e:
+            print(f"Error deleting session: {e}")
+        #except Exception:  # skipcq: PYL-W0703
+            #return
 
     async def update_peers(self, peers: List[Tuple[int, int, str, str, str]]) -> None:
         """(id, access_hash, type, username, phone_number)"""
@@ -158,6 +176,7 @@ class PersistentStorage(Storage):
         await self._session.update_one({"_id": 0}, {"$set": {attr: value}}, upsert=True)
 
     async def _accessor(self, value: Any = object) -> Any:
+        print(f"Accessing session attribute: {inspect.stack()[2].function}")
         return await self._get() if value == object else await self._set(value)
 
     async def dc_id(self, value=object) -> Optional[int]:

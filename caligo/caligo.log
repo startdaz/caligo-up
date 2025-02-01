@@ -1,0 +1,159 @@
+[ 00:15:22: INFO     ] Launch          - Loading code
+[ 00:15:22: INFO     ] Launch          - Using uvloop event loop
+[ 00:15:22: INFO     ] Launch          - Initializing bot
+[ 00:15:22: INFO     ] Bot             - Starting
+[ 00:15:23: INFO     ] Bot             - Loading modules
+[ 00:15:23: INFO     ] Bot             - Loading module 'Debug' from 'caligo/modules/debug.py'
+[ 00:15:23: INFO     ] Bot             - Loading module 'Main' from 'caligo/modules/main.py'
+[ 00:15:23: INFO     ] Bot             - Loading module 'Moderation' from 'caligo/modules/moderation.py'
+[ 00:15:23: INFO     ] Bot             - Loading module 'Network' from 'caligo/modules/network.py'
+[ 00:15:23: INFO     ] Bot             - Loading module 'Stats' from 'caligo/modules/stats.py'
+[ 00:15:23: INFO     ] Bot             - Loading module 'Sticker' from 'caligo/modules/stickers.py'
+[ 00:15:23: INFO     ] Bot             - Loading module 'System' from 'caligo/modules/system.py'
+[ 00:15:23: INFO     ] Bot             - Loading module 'Text' from 'caligo/modules/text.py'
+[ 00:15:23: INFO     ] Bot             - All modules loaded.
+[ 00:15:23: INFO     ] Bot             - Bot is ready
+[ 00:22:18: INFO     ] System          - Preparing to restart...
+[ 00:22:18: INFO     ] Bot             - Stopping
+[ 00:22:43: INFO     ] Bot             - Stop signal received ('SIGINT').
+[ 00:23:15: INFO     ] Launch          - Loading code
+[ 00:23:15: INFO     ] Launch          - Using uvloop event loop
+[ 00:23:15: INFO     ] Launch          - Initializing bot
+[ 00:23:15: INFO     ] Bot             - Starting
+[ 00:23:15: INFO     ] Bot             - Loading modules
+[ 00:23:15: INFO     ] Bot             - Loading module 'Debug' from 'caligo/modules/debug.py'
+[ 00:23:15: INFO     ] Bot             - Loading module 'Main' from 'caligo/modules/main.py'
+[ 00:23:15: INFO     ] Bot             - Loading module 'Moderation' from 'caligo/modules/moderation.py'
+[ 00:23:15: INFO     ] Bot             - Loading module 'Network' from 'caligo/modules/network.py'
+[ 00:23:15: INFO     ] Bot             - Loading module 'Stats' from 'caligo/modules/stats.py'
+[ 00:23:15: INFO     ] Bot             - Loading module 'Sticker' from 'caligo/modules/stickers.py'
+[ 00:23:15: INFO     ] Bot             - Loading module 'System' from 'caligo/modules/system.py'
+[ 00:23:15: INFO     ] Bot             - Loading module 'Text' from 'caligo/modules/text.py'
+[ 00:23:15: INFO     ] Bot             - All modules loaded.
+[ 00:23:15: INFO     ] System          - Bot restarted in 57 sec
+[ 00:23:15: INFO     ] Bot             - Bot is ready
+[ 00:34:30: INFO     ] System          - Preparing to restart...
+[ 00:34:30: INFO     ] Bot             - Stopping
+[ 00:36:26: INFO     ] Bot             - Stop signal received ('SIGINT').
+[ 00:38:06: INFO     ] Launch          - Loading code
+[ 00:38:06: INFO     ] Launch          - Using uvloop event loop
+[ 00:38:06: INFO     ] Launch          - Initializing bot
+[ 00:38:06: INFO     ] Bot             - Starting
+[ 00:38:06: INFO     ] Bot             - Loading modules
+[ 00:38:06: INFO     ] Bot             - Loading module 'Debug' from 'caligo/modules/debug.py'
+[ 00:38:06: INFO     ] Bot             - Loading module 'Main' from 'caligo/modules/main.py'
+[ 00:38:06: INFO     ] Bot             - Loading module 'Moderation' from 'caligo/modules/moderation.py'
+[ 00:38:06: INFO     ] Bot             - Loading module 'Network' from 'caligo/modules/network.py'
+[ 00:38:06: INFO     ] Bot             - Loading module 'Stats' from 'caligo/modules/stats.py'
+[ 00:38:06: INFO     ] Bot             - Loading module 'Sticker' from 'caligo/modules/stickers.py'
+[ 00:38:06: INFO     ] Bot             - Loading module 'System' from 'caligo/modules/system.py'
+[ 00:38:06: INFO     ] Bot             - Loading module 'Text' from 'caligo/modules/text.py'
+[ 00:38:06: INFO     ] Bot             - All modules loaded.
+[ 00:38:07: INFO     ] System          - Bot restarted in 3m 36s
+[ 00:38:07: INFO     ] Bot             - Bot is ready
+[ 00:39:05: INFO     ] Bot             - Stopping
+[ 00:39:05: INFO     ] Bot             - Running post-stop hooks
+[ 00:41:10: INFO     ] Launch          - Loading code
+[ 00:41:10: INFO     ] Launch          - Using uvloop event loop
+[ 00:41:10: INFO     ] Launch          - Initializing bot
+[ 00:41:10: INFO     ] Bot             - Starting
+[ 00:41:10: INFO     ] Bot             - Loading modules
+[ 00:41:10: INFO     ] Bot             - Loading module 'Debug' from 'caligo/modules/debug.py'
+[ 00:41:10: INFO     ] Bot             - Loading module 'Main' from 'caligo/modules/main.py'
+[ 00:41:10: INFO     ] Bot             - Loading module 'Moderation' from 'caligo/modules/moderation.py'
+[ 00:41:10: INFO     ] Bot             - Loading module 'Network' from 'caligo/modules/network.py'
+[ 00:41:10: INFO     ] Bot             - Loading module 'Stats' from 'caligo/modules/stats.py'
+[ 00:41:10: INFO     ] Bot             - Loading module 'Sticker' from 'caligo/modules/stickers.py'
+[ 00:41:10: INFO     ] Bot             - Loading module 'System' from 'caligo/modules/system.py'
+[ 00:41:10: INFO     ] Bot             - Loading module 'Text' from 'caligo/modules/text.py'
+[ 00:41:10: INFO     ] Bot             - All modules loaded.
+[ 00:41:11: INFO     ] Bot             - Bot is ready
+[ 00:44:54: ERROR    ] Network         - Error in command 'ping'
+Traceback (most recent call last):
+  File "/mnt/cgo/caligo/core/command_dispatcher.py", line 149, in on_command
+    ret = await cmd.func(ctx)
+  File "/mnt/cgo/caligo/modules/network.py", line 79, in cmd_ping
+    await ctx.respond("Calculating response time...")
+  File "/mnt/cgo/caligo/command.py", line 189, in respond
+    self.response = await self.bot.respond(
+  File "/mnt/cgo/caligo/core/telegram_bot.py", line 322, in respond
+    return await msg.edit(text=text, **kwargs)
+  File "/mnt/cgo/venv/lib/python3.10/site-packages/pyrogram/types/messages_and_media/message.py", line 4345, in edit_text
+    return await self._client.edit_message_text(
+  File "/mnt/cgo/venv/lib/python3.10/site-packages/pyrogram/methods/messages/edit_message_text.py", line 109, in edit_message_text
+    r = await self.invoke(rpc)
+  File "/mnt/cgo/venv/lib/python3.10/site-packages/pyrogram/methods/advanced/invoke.py", line 80, in invoke
+    r = await self.session.invoke(
+  File "/mnt/cgo/venv/lib/python3.10/site-packages/pyrogram/session/session.py", line 420, in invoke
+    return await self.send(query, timeout=timeout)
+  File "/mnt/cgo/venv/lib/python3.10/site-packages/pyrogram/session/session.py", line 377, in send
+    RPCError.raise_it(result, type(data))
+  File "/mnt/cgo/venv/lib/python3.10/site-packages/pyrogram/errors/rpc_error.py", line 93, in raise_it
+    raise getattr(
+pyrogram.errors.exceptions.bad_request_400.MessageIdInvalid: Telegram says: [400 MESSAGE_ID_INVALID] (caused by "messages.EditMessage") Pyrogram 2.3.57 thinks: The message id is invalid
+[ 00:44:54: ERROR    ] Network         - Error in command handler
+Traceback (most recent call last):
+  File "/mnt/cgo/caligo/core/command_dispatcher.py", line 149, in on_command
+    ret = await cmd.func(ctx)
+  File "/mnt/cgo/caligo/modules/network.py", line 79, in cmd_ping
+    await ctx.respond("Calculating response time...")
+  File "/mnt/cgo/caligo/command.py", line 189, in respond
+    self.response = await self.bot.respond(
+  File "/mnt/cgo/caligo/core/telegram_bot.py", line 322, in respond
+    return await msg.edit(text=text, **kwargs)
+  File "/mnt/cgo/venv/lib/python3.10/site-packages/pyrogram/types/messages_and_media/message.py", line 4345, in edit_text
+    return await self._client.edit_message_text(
+  File "/mnt/cgo/venv/lib/python3.10/site-packages/pyrogram/methods/messages/edit_message_text.py", line 109, in edit_message_text
+    r = await self.invoke(rpc)
+  File "/mnt/cgo/venv/lib/python3.10/site-packages/pyrogram/methods/advanced/invoke.py", line 80, in invoke
+    r = await self.session.invoke(
+  File "/mnt/cgo/venv/lib/python3.10/site-packages/pyrogram/session/session.py", line 420, in invoke
+    return await self.send(query, timeout=timeout)
+  File "/mnt/cgo/venv/lib/python3.10/site-packages/pyrogram/session/session.py", line 377, in send
+    RPCError.raise_it(result, type(data))
+  File "/mnt/cgo/venv/lib/python3.10/site-packages/pyrogram/errors/rpc_error.py", line 93, in raise_it
+    raise getattr(
+pyrogram.errors.exceptions.bad_request_400.MessageIdInvalid: Telegram says: [400 MESSAGE_ID_INVALID] (caused by "messages.EditMessage") Pyrogram 2.3.57 thinks: The message id is invalid
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/cgo/caligo/core/command_dispatcher.py", line 158, in on_command
+    await ctx.respond(
+  File "/mnt/cgo/caligo/command.py", line 189, in respond
+    self.response = await self.bot.respond(
+  File "/mnt/cgo/caligo/core/telegram_bot.py", line 322, in respond
+    return await msg.edit(text=text, **kwargs)
+  File "/mnt/cgo/venv/lib/python3.10/site-packages/pyrogram/types/messages_and_media/message.py", line 4345, in edit_text
+    return await self._client.edit_message_text(
+  File "/mnt/cgo/venv/lib/python3.10/site-packages/pyrogram/methods/messages/edit_message_text.py", line 109, in edit_message_text
+    r = await self.invoke(rpc)
+  File "/mnt/cgo/venv/lib/python3.10/site-packages/pyrogram/methods/advanced/invoke.py", line 80, in invoke
+    r = await self.session.invoke(
+  File "/mnt/cgo/venv/lib/python3.10/site-packages/pyrogram/session/session.py", line 420, in invoke
+    return await self.send(query, timeout=timeout)
+  File "/mnt/cgo/venv/lib/python3.10/site-packages/pyrogram/session/session.py", line 377, in send
+    RPCError.raise_it(result, type(data))
+  File "/mnt/cgo/venv/lib/python3.10/site-packages/pyrogram/errors/rpc_error.py", line 93, in raise_it
+    raise getattr(
+pyrogram.errors.exceptions.bad_request_400.MessageIdInvalid: Telegram says: [400 MESSAGE_ID_INVALID] (caused by "messages.EditMessage") Pyrogram 2.3.57 thinks: The message id is invalid
+[ 00:47:45: INFO     ] Network         - Received Telegram login code: 34717
+[ 00:51:11: INFO     ] Bot             - Stopping
+[ 00:51:37: INFO     ] Bot             - Stop signal received ('SIGINT').
+[ 00:51:51: INFO     ] Launch          - Loading code
+[ 00:51:51: INFO     ] Launch          - Using uvloop event loop
+[ 00:51:51: INFO     ] Launch          - Initializing bot
+[ 00:51:51: INFO     ] Bot             - Starting
+[ 00:51:51: INFO     ] Bot             - Loading modules
+[ 00:51:51: INFO     ] Bot             - Loading module 'Debug' from 'caligo/modules/debug.py'
+[ 00:51:51: INFO     ] Bot             - Loading module 'Main' from 'caligo/modules/main.py'
+[ 00:51:51: INFO     ] Bot             - Loading module 'Moderation' from 'caligo/modules/moderation.py'
+[ 00:51:51: INFO     ] Bot             - Loading module 'Network' from 'caligo/modules/network.py'
+[ 00:51:51: INFO     ] Bot             - Loading module 'Stats' from 'caligo/modules/stats.py'
+[ 00:51:51: INFO     ] Bot             - Loading module 'Sticker' from 'caligo/modules/stickers.py'
+[ 00:51:51: INFO     ] Bot             - Loading module 'System' from 'caligo/modules/system.py'
+[ 00:51:51: INFO     ] Bot             - Loading module 'Text' from 'caligo/modules/text.py'
+[ 00:51:51: INFO     ] Bot             - All modules loaded.
+[ 00:51:52: INFO     ] Bot             - Bot is ready
+[ 00:58:53: INFO     ] Bot             - Stop signal received ('SIGINT').
+[ 00:58:53: INFO     ] Bot             - Stopping
