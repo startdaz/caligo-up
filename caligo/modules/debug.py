@@ -188,8 +188,8 @@ class Debug(module.Module):
 <pre language="python">{escape(code)}</pre>
 <b>Output</b>:
 <pre language="python">{escape(out)}</pre>
-
-Time: {el_str}"""
+<b>Time</b>:
+<pre>{escape(el_str)}</pre>"""
         if len(respond_text) > 4096:
             with io.BytesIO(str.encode(out)) as out_file:
                 out_file.name = "eval.text"
