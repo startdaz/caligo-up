@@ -107,6 +107,7 @@ class Text(module.Module):
         except binascii.Error as e:
             return f"⚠️ Invalid Base64 data: {e}"
 
+"""
     @command.desc("Paste text to Spacebin")
     @command.usage("[text to paste, or reply]", reply=True)
     async def cmd_spacebin(self, ctx: command.Context) -> str:
@@ -132,3 +133,4 @@ class Text(module.Module):
         uname = f"[{ctx.msg.from_user.first_name}](tg://user?id={ctx.msg.from_user.id})"
         pasted = f"**Successfully pasted your data to Spacebin: {url}\n\nPaste by {uname}**"
         await msg.edit(pasted)
+"""
