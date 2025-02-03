@@ -1,5 +1,6 @@
 # Build Python package and dependencies
 FROM python:3.11-alpine3.16 AS python-build
+
 RUN apk add --no-cache \
         git \
         libffi-dev \
@@ -24,24 +25,19 @@ ENV PATH="/opt/venv/bin:$PATH"
 RUN mkdir -p /src
 WORKDIR /src
 
-# Install bot package and dependencies
+
 COPY . .
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
-# Package everything
-FROM python:3.11-alpine AS final
-# Update system first
+FROM python:3.11-alpine3.16 AS final
+
 RUN apk update
 
-# Install optional native tools (for full functionality)
 RUN apk add --no-cache \
         curl \
-        neofetch \
         git \
-        nss
-# Install native dependencies
-RUN apk add --no-cache \
+        nss \
         libffi \
         musl \
         gcc \
@@ -70,14 +66,17 @@ RUN apk add --no-cache \
         xvidcore \
         lame
 
-# Setup runtime files
+RUN curl -LO https://github.com/dylanaraps/neofetch/archive/refs/tags/7.1.0.tar.gz && \
+    tar -xzf 7.1.0.tar.gz && \
+    cd neofetch-7.1.0 && \
+    install -Dm755 neofetch /usr/local/bin/neofetch && \
+    cd .. && rm -rf neofetch-7.1.0 7.1.0.tar.gz
+
 RUN mkdir -p /caligo
 WORKDIR /caligo
 COPY . .
 
-# Copy Python venv
 ENV PATH="/opt/venv/bin:$PATH"
 COPY --from=python-build /opt/venv /opt/venv
 
-# Set runtime settings
 CMD ["python3", "-m", "caligo"]
