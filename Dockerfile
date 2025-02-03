@@ -1,5 +1,5 @@
 # Build Python package and dependencies
-FROM python:3.11-alpine AS python-build
+FROM python:3.11-alpine3.16 AS python-build
 RUN apk add --no-cache \
         git \
         libffi-dev \
